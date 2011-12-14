@@ -1,0 +1,83 @@
+﻿
+@model MvcPaging.PagedList<DonViTTTV.Models.TamTruModel>
+      
+@{
+    ViewBag.Title = "ListControl";
+}
+
+<p>
+    @Html.ActionLink("Đăng Ký Tạm Trú", "Create")
+</p>
+<table class="divgrid" id="list">
+    <tr>
+    <th>
+            Số Giấy Tờ
+    </th>
+       <th>
+            Loại Giấy Tờ
+        </th>
+        
+        <th>
+            Tên Khách
+        </th>
+        <th>
+           Quốc Tịch
+        </th>
+        <th>
+           Lí Do
+        </th>
+        
+        
+        <th>
+           Địa Chỉ Thường Trú
+        </th>
+        <th>
+            Ngày Đến
+        </th>
+        <th>
+           Ngày Đi
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TT_GiayTo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiayTo)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.TT_FullName)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.QuocTich)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LiDo)
+        </td>
+       
+       <td>
+            @Html.DisplayFor(modelItem => item.TT_DiaChiThuongTru)
+        </td>
+        
+        <td>
+            @String.Format("{0:dd/MM/yyyy}", item.TT_NgayDen)
+        </td>
+        <td>
+              @String.Format("{0:dd/MM/yyyy}", item.TT_NgayDi)
+        </td>
+
+        <td>
+          [  @Html.ActionLink("Edit", "Edit", new { id = item.MaTamTru }) ]
+        </td>
+    
+    </tr>
+}
+
+</table>
+<div class="pager">
+  @Ajax.Pager(ViewData.Model.PageSize, ViewData.Model.PageNumber, ViewData.Model.TotalItemCount, new { controller = "TamTru", action = "Search", keySearch = ViewData["keySearch"], valSearch = ViewData["valSearch"], keyFilter = ViewData["keyFilter"] }, new AjaxOptions { UpdateTargetId = "divGrid", OnBegin = "beginPaging", OnSuccess = "successPaging" })
+ </div>

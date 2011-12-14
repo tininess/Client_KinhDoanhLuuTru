@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Level2Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8888/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8888/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8888/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" />
+      <xsd:import schemaLocation="http://localhost:8888/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://localhost:8888/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost:8888/?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/TTTV_Host.Contract" />
+      <xsd:import schemaLocation="http://localhost:8888/?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Web.Security" />
+      <xsd:import schemaLocation="http://localhost:8888/?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:8888/?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILevel2Service_SaveChanges_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChanges" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_SaveChanges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_AddObject_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddObject" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_AddObject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_DeleteObject_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteObject" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_DeleteObject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Dispose_InputMessage">
+    <wsdl:part name="parameters" element="tns:Dispose" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Dispose_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisposeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_deleteTamTru_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteTamTru" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_deleteTamTru_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteTamTruResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_insertAtPolice_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertAtPolice" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_insertAtPolice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertAtPoliceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_insertbyUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertbyUser" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_insertbyUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertbyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Duyet_InputMessage">
+    <wsdl:part name="parameters" element="tns:Duyet" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Duyet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DuyetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Email_InputMessage">
+    <wsdl:part name="parameters" element="tns:Email" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Email_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_RoleID_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleID" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_RoleID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:getHistory" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_insertbyHotel_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertbyHotel" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_insertbyHotel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertbyHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getUserList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserList" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getUserList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getUserInfoByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserInfoByID" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getUserInfoByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserInfoByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getUserLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserLogin" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getUserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_updateUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_updateUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_chkLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:chkLogin" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_chkLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:chkLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_chkLoginClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:chkLoginClient" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_chkLoginClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:chkLoginClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_changePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:changePassword" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_changePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_InsertUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUser" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_InsertUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_InsertUser_CustomExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/TTTV_Host.Contract" name="detail" element="q1:CustomException" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllProvince_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllProvince" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllProvince_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllProvinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllDistrict_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDistrict" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllDistrict_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllDetailProvince_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDetailProvince" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllDetailProvince_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDetailProvinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_GetDistrictNameById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistrictNameById" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_GetDistrictNameById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistrictNameByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_GetProvinceDetailNameById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvinceDetailNameById" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_GetProvinceDetailNameById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvinceDetailNameByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_checkUsernameExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkUsernameExist" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_checkUsernameExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkUsernameExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_checkEmailExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkEmailExist" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_checkEmailExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkEmailExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_GetRolesForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesForUser" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_GetRolesForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllTamTru_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllTamTru" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllTamTru_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllTamTruResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Tinh_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tinh" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Tinh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TinhResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Quan_InputMessage">
+    <wsdl:part name="parameters" element="tns:Quan" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Quan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuanResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Phuong_InputMessage">
+    <wsdl:part name="parameters" element="tns:Phuong" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Phuong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhuongResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllLiDo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllLiDo" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllLiDo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllLiDoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllQuocTich_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllQuocTich" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllQuocTich_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllQuocTichResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllGiayTo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllGiayTo" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllGiayTo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllGiayToResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllStatus" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllType_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllType" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllRoles" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getAllRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getTamTruById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTamTruById" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_getTamTruById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTamTruByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Updatetamtru_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updatetamtru" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Updatetamtru_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatetamtruResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_Updatetamtru_FaultOutOfMemoryFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/" name="detail" element="q2:FaultOutOfMemory" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_UpdatetamtruByHotel_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatetamtruByHotel" />
+  </wsdl:message>
+  <wsdl:message name="ILevel2Service_UpdatetamtruByHotel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatetamtruByHotelResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILevel2Service">
+    <wsdl:operation name="SaveChanges">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/SaveChanges" message="tns:ILevel2Service_SaveChanges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/SaveChangesResponse" message="tns:ILevel2Service_SaveChanges_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddObject">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/AddObject" message="tns:ILevel2Service_AddObject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/AddObjectResponse" message="tns:ILevel2Service_AddObject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteObject">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/DeleteObject" message="tns:ILevel2Service_DeleteObject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/DeleteObjectResponse" message="tns:ILevel2Service_DeleteObject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Dispose">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/Dispose" message="tns:ILevel2Service_Dispose_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/DisposeResponse" message="tns:ILevel2Service_Dispose_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteTamTru">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/deleteTamTru" message="tns:ILevel2Service_deleteTamTru_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/deleteTamTruResponse" message="tns:ILevel2Service_deleteTamTru_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertAtPolice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/insertAtPolice" message="tns:ILevel2Service_insertAtPolice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/insertAtPoliceResponse" message="tns:ILevel2Service_insertAtPolice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertbyUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/insertbyUser" message="tns:ILevel2Service_insertbyUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/insertbyUserResponse" message="tns:ILevel2Service_insertbyUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Duyet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/Duyet" message="tns:ILevel2Service_Duyet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/DuyetResponse" message="tns:ILevel2Service_Duyet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Email">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/Email" message="tns:ILevel2Service_Email_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/EmailResponse" message="tns:ILevel2Service_Email_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/RoleID" message="tns:ILevel2Service_RoleID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/RoleIDResponse" message="tns:ILevel2Service_RoleID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getHistory" message="tns:ILevel2Service_getHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getHistoryResponse" message="tns:ILevel2Service_getHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertbyHotel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/insertbyHotel" message="tns:ILevel2Service_insertbyHotel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/insertbyHotelResponse" message="tns:ILevel2Service_insertbyHotel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getUserList" message="tns:ILevel2Service_getUserList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getUserListResponse" message="tns:ILevel2Service_getUserList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserInfoByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getUserInfoByID" message="tns:ILevel2Service_getUserInfoByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getUserInfoByIDResponse" message="tns:ILevel2Service_getUserInfoByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getUserLogin" message="tns:ILevel2Service_getUserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getUserLoginResponse" message="tns:ILevel2Service_getUserLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/updateUserInfo" message="tns:ILevel2Service_updateUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/updateUserInfoResponse" message="tns:ILevel2Service_updateUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="chkLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/chkLogin" message="tns:ILevel2Service_chkLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/chkLoginResponse" message="tns:ILevel2Service_chkLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="chkLoginClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/chkLoginClient" message="tns:ILevel2Service_chkLoginClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/chkLoginClientResponse" message="tns:ILevel2Service_chkLoginClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/changePassword" message="tns:ILevel2Service_changePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/changePasswordResponse" message="tns:ILevel2Service_changePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/InsertUser" message="tns:ILevel2Service_InsertUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/InsertUserResponse" message="tns:ILevel2Service_InsertUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ILevel2Service/InsertUserCustomExceptionFault" name="CustomExceptionFault" message="tns:ILevel2Service_InsertUser_CustomExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllProvince">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getAllProvince" message="tns:ILevel2Service_getAllProvince_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getAllProvinceResponse" message="tns:ILevel2Service_getAllProvince_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllDistrict">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getAllDistrict" message="tns:ILevel2Service_getAllDistrict_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getAllDistrictResponse" message="tns:ILevel2Service_getAllDistrict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllDetailProvince">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getAllDetailProvince" message="tns:ILevel2Service_getAllDetailProvince_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getAllDetailProvinceResponse" message="tns:ILevel2Service_getAllDetailProvince_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictNameById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/GetDistrictNameById" message="tns:ILevel2Service_GetDistrictNameById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/GetDistrictNameByIdResponse" message="tns:ILevel2Service_GetDistrictNameById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProvinceDetailNameById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/GetProvinceDetailNameById" message="tns:ILevel2Service_GetProvinceDetailNameById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/GetProvinceDetailNameByIdResponse" message="tns:ILevel2Service_GetProvinceDetailNameById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkUsernameExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/checkUsernameExist" message="tns:ILevel2Service_checkUsernameExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/checkUsernameExistResponse" message="tns:ILevel2Service_checkUsernameExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkEmailExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/checkEmailExist" message="tns:ILevel2Service_checkEmailExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/checkEmailExistResponse" message="tns:ILevel2Service_checkEmailExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/GetRolesForUser" message="tns:ILevel2Service_GetRolesForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/GetRolesForUserResponse" message="tns:ILevel2Service_GetRolesForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllTamTru">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getAllTamTru" message="tns:ILevel2Service_getAllTamTru_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getAllTamTruResponse" message="tns:ILevel2Service_getAllTamTru_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tinh">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/Tinh" message="tns:ILevel2Service_Tinh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/TinhResponse" message="tns:ILevel2Service_Tinh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Quan">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/Quan" message="tns:ILevel2Service_Quan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/QuanResponse" message="tns:ILevel2Service_Quan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Phuong">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/Phuong" message="tns:ILevel2Service_Phuong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/PhuongResponse" message="tns:ILevel2Service_Phuong_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllLiDo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getAllLiDo" message="tns:ILevel2Service_getAllLiDo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getAllLiDoResponse" message="tns:ILevel2Service_getAllLiDo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllQuocTich">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getAllQuocTich" message="tns:ILevel2Service_getAllQuocTich_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getAllQuocTichResponse" message="tns:ILevel2Service_getAllQuocTich_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllGiayTo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getAllGiayTo" message="tns:ILevel2Service_getAllGiayTo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getAllGiayToResponse" message="tns:ILevel2Service_getAllGiayTo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getAllStatus" message="tns:ILevel2Service_getAllStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getAllStatusResponse" message="tns:ILevel2Service_getAllStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getAllType" message="tns:ILevel2Service_getAllType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getAllTypeResponse" message="tns:ILevel2Service_getAllType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getAllRoles" message="tns:ILevel2Service_getAllRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getAllRolesResponse" message="tns:ILevel2Service_getAllRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTamTruById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/getTamTruById" message="tns:ILevel2Service_getTamTruById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/getTamTruByIdResponse" message="tns:ILevel2Service_getTamTruById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updatetamtru">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/Updatetamtru" message="tns:ILevel2Service_Updatetamtru_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/UpdatetamtruResponse" message="tns:ILevel2Service_Updatetamtru_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ILevel2Service/UpdatetamtruFaultOutOfMemoryFault" name="FaultOutOfMemoryFault" message="tns:ILevel2Service_Updatetamtru_FaultOutOfMemoryFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatetamtruByHotel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILevel2Service/UpdatetamtruByHotel" message="tns:ILevel2Service_UpdatetamtruByHotel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILevel2Service/UpdatetamtruByHotelResponse" message="tns:ILevel2Service_UpdatetamtruByHotel_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILevel2Service" type="tns:ILevel2Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveChanges">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/SaveChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddObject">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/AddObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteObject">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/DeleteObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dispose">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/Dispose" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteTamTru">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/deleteTamTru" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertAtPolice">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/insertAtPolice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertbyUser">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/insertbyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Duyet">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/Duyet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Email">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/Email" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoleID">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/RoleID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHistory">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertbyHotel">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/insertbyHotel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserList">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getUserList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserInfoByID">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getUserInfoByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserLogin">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getUserLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUserInfo">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/updateUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chkLogin">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/chkLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chkLoginClient">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/chkLoginClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/changePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/InsertUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionFault">
+        <soap:fault use="literal" name="CustomExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAllProvince">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getAllProvince" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDistrict">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getAllDistrict" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDetailProvince">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getAllDetailProvince" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictNameById">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/GetDistrictNameById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProvinceDetailNameById">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/GetProvinceDetailNameById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkUsernameExist">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/checkUsernameExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkEmailExist">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/checkEmailExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesForUser">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/GetRolesForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTamTru">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getAllTamTru" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tinh">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/Tinh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Quan">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/Quan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Phuong">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/Phuong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllLiDo">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getAllLiDo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllQuocTich">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getAllQuocTich" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllGiayTo">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getAllGiayTo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllStatus">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getAllStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllType">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getAllType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllRoles">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getAllRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTamTruById">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/getTamTruById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updatetamtru">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/Updatetamtru" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="FaultOutOfMemoryFault">
+        <soap:fault use="literal" name="FaultOutOfMemoryFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatetamtruByHotel">
+      <soap:operation soapAction="http://tempuri.org/ILevel2Service/UpdatetamtruByHotel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Level2Service">
+    <wsdl:port name="BasicHttpBinding_ILevel2Service" binding="tns:BasicHttpBinding_ILevel2Service">
+      <soap:address location="http://localhost:8888/LoginInformation" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

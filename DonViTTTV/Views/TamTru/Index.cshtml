@@ -1,0 +1,35 @@
+﻿
+@model  MvcPaging.IPagedList<DonViTTTV.Models.TamTruModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@{DonViTTTV.Models.TamTruModel a = new DonViTTTV.Models.TamTruModel();}
+ <div id="divSearch">
+        @{Html.RenderPartial("_SearchControl", a);}
+    </div>
+    <div id="divGrid">
+            @{Html.RenderPartial("_ListControl", this.Model);}
+    </div>
+
+    <script type="text/javascript">
+
+        function beginPaging(args) {
+            // Animate
+            $('#divGrid').fadeOut('slow');
+        }
+
+        function successPaging() {
+            // Animate
+            $('#divGrid').fadeIn('slow');
+
+        }
+
+        function failurePaging() {
+            alert("Could not retrieve contacts.");
+        }
+
+    </script>
+

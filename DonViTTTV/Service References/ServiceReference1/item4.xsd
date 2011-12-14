@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8888/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" />
+  <xs:import schemaLocation="http://localhost:8888/?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Web.Security" />
+  <xs:import schemaLocation="http://localhost:8888/?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="SaveChanges">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveChangesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddObject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="model" nillable="true" type="q1:TTTV__TamTru" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddObjectResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteObject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="model" nillable="true" type="q2:TTTV__TamTru" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteObjectResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Dispose">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisposeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteTamTru">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteTamTruResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertAtPolice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectedGiayToValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedLiDoValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedQuocTichValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedProvinceValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedDistrictValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedDetailProvincesValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="TT_FullName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_DiaChiThuongTru" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_DiaChiTamTru" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_NgayDen" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TT_NgayDi" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TT_Room" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_GiayTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_LiDoKhac" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertAtPoliceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertbyUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SelectedGiayToValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedLiDoValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedQuocTichValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="TT_DiaChiTamTru" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_NgayDen" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TT_NgayDi" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TT_Room" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_GiayTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_LiDoKhac" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertbyUserResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Duyet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DuyetResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Email">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EmailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RoleIDResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getHistoryResult" nillable="true" type="q3:ArrayOfTTTV__TamTru" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertbyHotel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SelectedGiayToValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedLiDoValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedQuocTichValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="TT_Fullname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_DiaChiThuongTru" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_NgayDen" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TT_NgayDi" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TT_Room" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_GiayTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_LiDoKhac" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertbyHotelResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getUserListResult" nillable="true" type="q4:ArrayOfTTTV__UserInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserInfoByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserInfoByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getUserInfoByIDResult" nillable="true" type="q5:TTTV__UserInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getUserLoginResult" nillable="true" type="q6:TTTV__Users" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateUserInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Companyname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BusinessCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Moblie" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CMND" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Age" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="province" type="xs:int" />
+        <xs:element minOccurs="0" name="district" type="xs:int" />
+        <xs:element minOccurs="0" name="detail" type="xs:int" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="role" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateUserInfoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chkLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chkLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chkLoginResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chkLoginClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chkLoginClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chkLoginClientResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="changePassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="oldpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newpass" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="changePasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="changePasswordResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="provinceID" type="xs:int" />
+        <xs:element minOccurs="0" name="districtID" type="xs:int" />
+        <xs:element minOccurs="0" name="detailprovinceID" type="xs:int" />
+        <xs:element minOccurs="0" name="roleID" type="xs:int" />
+        <xs:element minOccurs="0" name="question" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="answear" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="companyname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businesscode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CMND" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="age" type="xs:int" />
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="subaddress" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/System.Web.Security" minOccurs="0" name="status" type="q7:MembershipCreateStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllProvince">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllProvinceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getAllProvinceResult" nillable="true" type="q8:ArrayOfTTTV__Provinces" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllDistrict">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllDistrictResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getAllDistrictResult" nillable="true" type="q9:ArrayOfTTTV__Districts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllDetailProvince">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllDetailProvinceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getAllDetailProvinceResult" nillable="true" type="q10:ArrayOfTTTV__DetailProvinces" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistrictNameById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProvinceId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistrictNameByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="GetDistrictNameByIdResult" nillable="true" type="q11:ArrayOfTTTV__Districts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProvinceDetailNameById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProvinceId" type="xs:int" />
+        <xs:element minOccurs="0" name="DistrictID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProvinceDetailNameByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="GetProvinceDetailNameByIdResult" nillable="true" type="q12:ArrayOfTTTV__DetailProvinces" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkUsernameExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkUsernameExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="checkUsernameExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkEmailExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkEmailExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="checkEmailExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRolesForUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRolesForUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetRolesForUserResult" nillable="true" type="q13:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllTamTru">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllTamTruResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getAllTamTruResult" nillable="true" type="q14:ArrayOfTTTV__TamTru" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tinh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="provinceID" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TinhResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TinhResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Quan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="provinceID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="districtID" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QuanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QuanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Phuong">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="provinceID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="districtID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="detailID" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PhuongResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PhuongResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllLiDo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllLiDoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getAllLiDoResult" nillable="true" type="q15:ArrayOfTTTV__LiDo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllQuocTich">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllQuocTichResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getAllQuocTichResult" nillable="true" type="q16:ArrayOfTTTV__QuocTich" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllGiayTo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllGiayToResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getAllGiayToResult" nillable="true" type="q17:ArrayOfTTTV__GiayTo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllStatus">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getAllStatusResult" nillable="true" type="q18:ArrayOfTTTV__Status" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getAllTypeResult" nillable="true" type="q19:ArrayOfTTTV__Type" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllRoles">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getAllRolesResult" nillable="true" type="q20:ArrayOfTTTV__Roles" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTamTruById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTamTruByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" minOccurs="0" name="getTamTruByIdResult" nillable="true" type="q21:TTTV__TamTru" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Updatetamtru">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaTamTru" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedTypeValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedGiayToValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedLiDoValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedQuocTichValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedStatusValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="TT_FullName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_DiaChiThuongTru" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_DiaChiTamTru" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_NgayDen" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TT_NgayDi" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TT_Room" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_GiayTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_LiDoKhac" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatetamtruResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatetamtruByHotel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaTamTru" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedGiayToValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedLiDoValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="SelectedQuocTichValue" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="TT_FullName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_DiaChiThuongTru" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_NgayDen" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TT_NgayDi" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TT_Room" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_GiayTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TT_LiDoKhac" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatetamtruByHotelResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

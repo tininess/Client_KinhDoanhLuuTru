@@ -1,0 +1,39 @@
+﻿@model DonViTTTV.Models.TamTruModel
+           
+@using (Ajax.BeginForm("Search", "TamTru", null, new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "divGrid", OnBegin = "beginPaging", OnSuccess = "successPaging" }, new { name = "formSearch" }))
+{ 
+    
+   <table>
+    <tr>
+        <td>
+            <fieldset>
+                <legend>Search by: </legend>
+                @Html.RadioButton("keySearch", "code", true) Số Giấy Tờ
+                @Html.RadioButton("keySearch", "com", false) Họ Và Tên
+                @Html.TextBox("valSearch", "")
+                <input type="submit" value="Search" id="btnSubmit" />
+            </fieldset>
+        </td>
+        <td>
+            <fieldset>
+                <legend>Lọc</legend>
+                @Html.RadioButton("keyFilter", "1", false, new { onclick = "submit_form()" }) Tất Cả
+                @Html.RadioButton("keyFilter", "2", false, new { onclick = "submit_form()" }) Đang Ở
+                @Html.RadioButton("keyFilter", "3", true, new { onclick = "submit_form()" })  Đã Đi  
+           </fieldset>
+        </td>
+    </tr>
+   </table>
+}
+<script type="text/javascript">
+    function submit_form() {
+        var btn = document.getElementById("btnSubmit");
+        btn.click();
+    }
+    </script>
+   
+
+
+
+ 
+   

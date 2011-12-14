@@ -1,0 +1,8 @@
+c:\users\user\documents\visual studio 2010\Projects\DonViTTTV\DonViTTTV\obj\Debug\ResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2010\Projects\DonViTTTV\DonViTTTV\bin\DonViTTTV.dll
+c:\users\user\documents\visual studio 2010\Projects\DonViTTTV\DonViTTTV\bin\DonViTTTV.pdb
+c:\users\user\documents\visual studio 2010\Projects\DonViTTTV\DonViTTTV\bin\EntityFramework.dll
+c:\users\user\documents\visual studio 2010\Projects\DonViTTTV\DonViTTTV\bin\EntityFramework.xml
+c:\users\user\documents\visual studio 2010\Projects\DonViTTTV\DonViTTTV\obj\Debug\DonViTTTV.dll
+c:\users\user\documents\visual studio 2010\Projects\DonViTTTV\DonViTTTV\obj\Debug\DonViTTTV.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\DonViTTTV\DonViTTTV\bin\MvcPaging.dll

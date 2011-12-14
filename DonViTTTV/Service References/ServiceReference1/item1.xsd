@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TTTV_Host.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8888/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="TTTV__TamTru">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DetailProvinceID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DistrictID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID_GiayTo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID_LiDo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID_QuocTich" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID_Status" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID_TamTru" type="xs:int" />
+          <xs:element minOccurs="0" name="ID_Type" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ProvinceID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TTTV__GiayTo" nillable="true" type="tns:TTTV__GiayTo" />
+          <xs:element minOccurs="0" name="TTTV__GiayToReference" nillable="true" type="q1:EntityReferenceOfTTTV__GiayToNK242YQC" />
+          <xs:element minOccurs="0" name="TTTV__LiDo" nillable="true" type="tns:TTTV__LiDo" />
+          <xs:element minOccurs="0" name="TTTV__LiDoReference" nillable="true" type="q1:EntityReferenceOfTTTV__LiDoNK242YQC" />
+          <xs:element minOccurs="0" name="TTTV__QuocTich" nillable="true" type="tns:TTTV__QuocTich" />
+          <xs:element minOccurs="0" name="TTTV__QuocTichReference" nillable="true" type="q1:EntityReferenceOfTTTV__QuocTichNK242YQC" />
+          <xs:element minOccurs="0" name="TTTV__Status" nillable="true" type="tns:TTTV__Status" />
+          <xs:element minOccurs="0" name="TTTV__StatusReference" nillable="true" type="q1:EntityReferenceOfTTTV__StatusNK242YQC" />
+          <xs:element minOccurs="0" name="TTTV__Type" nillable="true" type="tns:TTTV__Type" />
+          <xs:element minOccurs="0" name="TTTV__TypeReference" nillable="true" type="q1:EntityReferenceOfTTTV__TypeNK242YQC" />
+          <xs:element minOccurs="0" name="TTTV__Users" nillable="true" type="tns:TTTV__Users" />
+          <xs:element minOccurs="0" name="TTTV__UsersReference" nillable="true" type="q1:EntityReferenceOfTTTV__UsersNK242YQC" />
+          <xs:element minOccurs="0" name="TT_DiaChiTamTru" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TT_DiaChiThuongTru" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TT_FullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TT_GiayTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TT_LiDoKhac" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TT_NgayDen" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TT_NgayDi" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TT_Room" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaiKhoanDangKi" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TTTV__TamTru" nillable="true" type="tns:TTTV__TamTru" />
+  <xs:complexType name="TTTV__GiayTo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GiayTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID_GiayTo" type="xs:int" />
+          <xs:element minOccurs="0" name="TTTV__TamTru" nillable="true" type="tns:ArrayOfTTTV__TamTru" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TTTV__GiayTo" nillable="true" type="tns:TTTV__GiayTo" />
+  <xs:complexType name="ArrayOfTTTV__TamTru">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TTTV__TamTru" nillable="true" type="tns:TTTV__TamTru" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTTTV__TamTru" nillable="true" type="tns:ArrayOfTTTV__TamTru" />
+  <xs:complexType name="TTTV__LiDo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID_LiDo" type="xs:int" />
+          <xs:element minOccurs="0" name="LiDo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TTTV__TamTru" nillable="true" type="tns:ArrayOfTTTV__TamTru" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TTTV__LiDo" nillable="true" type="tns:TTTV__LiDo" />
+  <xs:complexType name="TTTV__QuocTich">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID_QuocTich" type="xs:int" />
+          <xs:element minOccurs="0" name="QuocTich" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TTTV__TamTru" nillable="true" type="tns:ArrayOfTTTV__TamTru" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TTTV__QuocTich" nillable="true" type="tns:TTTV__QuocTich" />
+  <xs:complexType name="TTTV__Status">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q5:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID_Status" type="xs:int" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TTTV__TamTru" nillable="true" type="tns:ArrayOfTTTV__TamTru" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TTTV__Status" nillable="true" type="tns:TTTV__Status" />
+  <xs:complexType name="TTTV__Type">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q6:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID_Type" type="xs:int" />
+          <xs:element minOccurs="0" name="TTTV__TamTru" nillable="true" type="tns:ArrayOfTTTV__TamTru" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TTTV__Type" nillable="true" type="tns:TTTV__Type" />
+  <xs:complexType name="TTTV__Users">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q7:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ForgotPassAnswer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ForgotPassQuestion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RoleId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TTTV__Roles" nillable="true" type="tns:TTTV__Roles" />
+          <xs:element minOccurs="0" name="TTTV__RolesReference" nillable="true" type="q7:EntityReferenceOfTTTV__RolesNK242YQC" />
+          <xs:element minOccurs="0" name="TTTV__TamTru" nillable="true" type="tns:ArrayOfTTTV__TamTru" />
+          <xs:element minOccurs="0" name="TTTV__UserInformation" nillable="true" type="tns:ArrayOfTTTV__UserInformation" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TTTV__Users" nillable="true" type="tns:TTTV__Users" />
+  <xs:complexType name="TTTV__Roles">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q8:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RoleDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RoleId" type="xs:int" />
+          <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TTTV__Users" nillable="true" type="tns:ArrayOfTTTV__Users" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TTTV__Roles" nillable="true" type="tns:TTTV__Roles" />
+  <xs:complexType name="ArrayOfTTTV__Users">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TTTV__Users" nillable="true" type="tns:TTTV__Users" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTTTV__Users" nillable="true" type="tns:ArrayOfTTTV__Users" />
+  <xs:complexType name="ArrayOfTTTV__UserInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TTTV__UserInformation" nillable="true" type="tns:TTTV__UserInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTTTV__UserInformation" nillable="true" type="tns:ArrayOfTTTV__UserInformation" />
+  <xs:complexType name="TTTV__UserInformation">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q9:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Age" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BusinessCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DistrictID" type="xs:int" />
+          <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PersonCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProvinceDetailID" type="xs:int" />
+          <xs:element minOccurs="0" name="ProvinceID" type="xs:int" />
+          <xs:element minOccurs="0" name="SubAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TTTV__Users" nillable="true" type="tns:TTTV__Users" />
+          <xs:element minOccurs="0" name="TTTV__UsersReference" nillable="true" type="q9:EntityReferenceOfTTTV__UsersNK242YQC" />
+          <xs:element minOccurs="0" name="UserFullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TTTV__UserInformation" nillable="true" type="tns:TTTV__UserInformation" />
+  <xs:complexType name="ArrayOfTTTV__Provinces">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TTTV__Provinces" nillable="true" type="tns:TTTV__Provinces" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTTTV__Provinces" nillable="true" type="tns:ArrayOfTTTV__Provinces" />
+  <xs:complexType name="TTTV__Provinces">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q10:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProvinceID" type="xs:int" />
+          <xs:element minOccurs="0" name="ProvinceName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TTTV__DetailProvinces" nillable="true" type="tns:ArrayOfTTTV__DetailProvinces" />
+          <xs:element minOccurs="0" name="TTTV__Districts" nillable="true" type="tns:ArrayOfTTTV__Districts" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TTTV__Provinces" nillable="true" type="tns:TTTV__Provinces" />
+  <xs:complexType name="ArrayOfTTTV__DetailProvinces">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TTTV__DetailProvinces" nillable="true" type="tns:TTTV__DetailProvinces" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTTTV__DetailProvinces" nillable="true" type="tns:ArrayOfTTTV__DetailProvinces" />
+  <xs:complexType name="TTTV__DetailProvinces">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q11:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DetailID" type="xs:int" />
+          <xs:element minOccurs="0" name="DetailName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DistrictID" type="xs:int" />
+          <xs:element minOccurs="0" name="ProvinceID" type="xs:int" />
+          <xs:element minOccurs="0" name="TTTV__Districts" nillable="true" type="tns:TTTV__Districts" />
+          <xs:element minOccurs="0" name="TTTV__DistrictsReference" nillable="true" type="q11:EntityReferenceOfTTTV__DistrictsNK242YQC" />
+          <xs:element minOccurs="0" name="TTTV__Provinces" nillable="true" type="tns:TTTV__Provinces" />
+          <xs:element minOccurs="0" name="TTTV__ProvincesReference" nillable="true" type="q11:EntityReferenceOfTTTV__ProvincesNK242YQC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TTTV__DetailProvinces" nillable="true" type="tns:TTTV__DetailProvinces" />
+  <xs:complexType name="TTTV__Districts">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q12:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DistrictID" type="xs:int" />
+          <xs:element minOccurs="0" name="DistrictName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProvinceID" type="xs:int" />
+          <xs:element minOccurs="0" name="TTTV__DetailProvinces" nillable="true" type="tns:ArrayOfTTTV__DetailProvinces" />
+          <xs:element minOccurs="0" name="TTTV__Provinces" nillable="true" type="tns:TTTV__Provinces" />
+          <xs:element minOccurs="0" name="TTTV__ProvincesReference" nillable="true" type="q12:EntityReferenceOfTTTV__ProvincesNK242YQC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TTTV__Districts" nillable="true" type="tns:TTTV__Districts" />
+  <xs:complexType name="ArrayOfTTTV__Districts">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TTTV__Districts" nillable="true" type="tns:TTTV__Districts" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTTTV__Districts" nillable="true" type="tns:ArrayOfTTTV__Districts" />
+  <xs:complexType name="ArrayOfTTTV__LiDo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TTTV__LiDo" nillable="true" type="tns:TTTV__LiDo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTTTV__LiDo" nillable="true" type="tns:ArrayOfTTTV__LiDo" />
+  <xs:complexType name="ArrayOfTTTV__QuocTich">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TTTV__QuocTich" nillable="true" type="tns:TTTV__QuocTich" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTTTV__QuocTich" nillable="true" type="tns:ArrayOfTTTV__QuocTich" />
+  <xs:complexType name="ArrayOfTTTV__GiayTo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TTTV__GiayTo" nillable="true" type="tns:TTTV__GiayTo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTTTV__GiayTo" nillable="true" type="tns:ArrayOfTTTV__GiayTo" />
+  <xs:complexType name="ArrayOfTTTV__Status">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TTTV__Status" nillable="true" type="tns:TTTV__Status" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTTTV__Status" nillable="true" type="tns:ArrayOfTTTV__Status" />
+  <xs:complexType name="ArrayOfTTTV__Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TTTV__Type" nillable="true" type="tns:TTTV__Type" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTTTV__Type" nillable="true" type="tns:ArrayOfTTTV__Type" />
+  <xs:complexType name="ArrayOfTTTV__Roles">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TTTV__Roles" nillable="true" type="tns:TTTV__Roles" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTTTV__Roles" nillable="true" type="tns:ArrayOfTTTV__Roles" />
+</xs:schema>

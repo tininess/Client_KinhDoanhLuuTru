@@ -1,0 +1,153 @@
+﻿@model DonViTTTV.Models.TamTruModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Chỉnh Sửa Thông Tin Tạm Trú</legend>
+
+        @Html.HiddenFor(model => model.MaTamTru)
+      
+        <table width="100%">
+        <tr>
+        
+        <td>
+          <div class="editor-label">
+            @Html.LabelFor(model => model.SelectedLiDoValue)
+        </div>
+        <div class="editor-field">
+            @Html.ValidationMessageFor(model => model.SelectedLiDoValue)
+            @Html.DropDownListFor(m => m.SelectedLiDoValue, ViewData["LiDo"] as SelectList)
+       
+        </div>
+        </td>
+       
+       
+        <td>
+          <div class="editor-label">
+            @Html.LabelFor(model => model.SelectedGiayToValue)
+        </div>
+        <div class="editor-field">
+            @Html.ValidationMessageFor(model => model.SelectedGiayToValue)
+            @Html.DropDownListFor(m => m.SelectedGiayToValue, ViewData["GiayTo"] as SelectList)
+       
+        </div>
+        </td>
+        <td>
+  
+          <div class="editor-label">
+            @Html.LabelFor(model => model.SelectedQuocTichValue)
+        </div>
+        <div class="editor-field">
+            @Html.ValidationMessageFor(model => model.SelectedQuocTichValue)
+            @Html.DropDownListFor(m => m.SelectedQuocTichValue, ViewData["QuocTich"] as SelectList)
+       
+        </div>
+        </td>
+         </tr>
+         <tr>
+         <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TT_FullName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TT_FullName)
+            @Html.ValidationMessageFor(model => model.TT_FullName)
+        </div>
+        </td>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TT_DiaChiThuongTru)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TT_DiaChiThuongTru)
+            @Html.ValidationMessageFor(model => model.TT_DiaChiThuongTru)
+        </div>
+        </td>
+        <td>
+         <div class="editor-label">
+            @Html.LabelFor(model => model.TT_LiDoKhac)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TT_LiDoKhac)
+            @Html.ValidationMessageFor(model => model.TT_LiDoKhac)
+        </div>
+        </td>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TT_GiayTo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TT_GiayTo)
+            @Html.ValidationMessageFor(model => model.TT_GiayTo)
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TT_NgayDen)
+        </div>
+        <div class="editor-field">
+           @* @Html.EditorFor(model => model.TT_NgayDen*@
+            
+        @*    @Html.TextBox("endDate", String.Format("{0:d}", Model.TT_NgayDen), new { id = "endDate", style = "width:100px"})*@
+   
+    @Html.TextBoxFor(model => model.TT_NgayDen, new { id = "startDate", style = "width:80px" })
+     @Html.ValidationMessageFor(model => model.TT_NgayDen)
+        </div>
+        </td>
+        <td>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TT_NgayDi)
+        </div>
+        <div class="editor-field">
+              @Html.TextBoxFor(model => model.TT_NgayDi, new { id = "endDate", style = "width:80px" })
+            @Html.ValidationMessageFor(model => model.TT_NgayDi)
+        </div>
+        </td>
+        <td>
+         <div class="editor-label">
+            @Html.LabelFor(model => model.TT_Room)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TT_Room)
+            @Html.ValidationMessageFor(model => model.TT_Room)
+        </div>
+</td>
+        </tr>
+    
+
+       
+        
+
+
+       
+
+
+        </table>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<script type="text/javascript">
+    $('#startDate').datepick({
+        pickerClass: 'startDate', showTrigger: '#calImg'
+    });
+    $('#endDate').datepick({
+        pickerClass: 'endDate', showTrigger: '#calImg'
+    });
+</script>
